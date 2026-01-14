@@ -1,0 +1,19 @@
+name: deploy-prod
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deployment placeholder
+        run: |
+          echo "This workflow represents a gated production deployment."
+          echo "In a real setup, this is where Terraform apply or ECS deployment would run."

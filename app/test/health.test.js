@@ -21,3 +21,6 @@ req.on("error", () => {
 });
 
 req.end();
+
+console.log("App test passed");
+process.exit(0);
