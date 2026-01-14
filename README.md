@@ -80,7 +80,8 @@ The Docker build context is scoped to the application directory to keep builds d
 CI is implemented using **GitHub Actions** and runs on:
 
 - Pull requests to `main`  
-- Pushes to `main`  
+- Pushes to `main`
+- CI workflows use path filtering to skip runs for documentation-only changes, reducing unnecessary pipeline executions while still validating all code changes. 
 
 ### Pipeline steps
 

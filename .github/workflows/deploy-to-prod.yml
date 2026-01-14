@@ -1,7 +1,12 @@
-name: deploy-prod
+name: deploy-to-prod
 
 on:
   workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - "README.md"
+      - "**/*.md"
 
 jobs:
   deploy:
