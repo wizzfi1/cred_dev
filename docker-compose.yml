@@ -3,10 +3,9 @@ version: "3.9"
 services:
   app:
     build:
-      context: .
-      dockerfile: docker/Dockerfile
+      context: ./app
     ports:
-      - "3000:3000"
+      - "3001:3000"
     env_file:
       - .env
     depends_on:
