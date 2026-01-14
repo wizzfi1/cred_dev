@@ -13,9 +13,7 @@ provider "aws" {
   region = var.aws_region
 }
 
-# -------------------
 # Networking
-# -------------------
 
 resource "aws_vpc" "this" {
   cidr_block = "10.0.0.0/16"
@@ -56,9 +54,7 @@ resource "aws_route_table_association" "b" {
   route_table_id = aws_route_table.public.id
 }
 
-# -------------------
 # Security Groups
-# -------------------
 
 resource "aws_security_group" "alb" {
   name   = "alb-sg"
@@ -98,9 +94,7 @@ resource "aws_security_group" "ecs" {
   }
 }
 
-# -------------------
 # Load Balancer
-# -------------------
 
 resource "aws_lb" "this" {
   name               = "cred-dev-alb"
@@ -133,9 +127,7 @@ resource "aws_lb_listener" "https" {
   }
 }
 
-# -------------------
 # ECS
-# -------------------
 
 resource "aws_ecs_cluster" "this" {
   name = "cred-dev-cluster"
