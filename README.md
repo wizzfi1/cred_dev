@@ -122,6 +122,19 @@ terraform validate
 
 The infrastructure was **not applied** as part of this assessment to avoid provisioning real cloud resources. Applying the configuration would require valid AWS credentials and an ACM certificate ARN.
 
+
+### Terraform Validation Evidence
+
+The following commands were run locally to validate the Terraform configuration:
+
+- `terraform init`
+- `terraform validate`
+
+Screenshots are included below for reference.
+
+![Terraform init](docs/screenshots/terraform-init.png)
+![Terraform validate](docs/screenshots/terraform-validate.png)
+
 ---
 
 ## Deployment Strategy
@@ -172,7 +185,7 @@ This provides sufficient visibility for a service of this scope.
 
 ## What I Would Improve With More Time
 
-- Add proper integration tests with short lived services in CI  
+- Add proper integration tests with short-lived services in CI  
 - Introduce autoscaling policies for ECS  
 - Add structured logging and metrics  
 - Use AWS Secrets Manager for runtime secrets  
