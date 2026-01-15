@@ -133,6 +133,8 @@ The following commands were run locally to validate the Terraform configuration:
 Screenshots are included below for reference.
 
 ![Terraform init](docs/screenshots/terraform-init.png)
+
+
 ![Terraform validate](docs/screenshots/terraform-validate.png)
 
 ---
